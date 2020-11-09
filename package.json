@@ -5,11 +5,24 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rocio Pepek",
   "license": "MIT",
   "dependencies": {
-    "countries-list": "^2.5.6"
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "countries-list": "^2.5.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.6"
   }
 }
