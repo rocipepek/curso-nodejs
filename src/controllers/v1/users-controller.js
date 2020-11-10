@@ -40,7 +40,7 @@ const login = async (req, res) => {
 
 const createUser = async (req, res) => {
   try {
-    const { username, email, password, data } = req.body;
+    const { name, surname, username, email, password, data } = req.body;
 
     const hash = await bcrypt.hash(password, 15);
 
@@ -53,6 +53,8 @@ const createUser = async (req, res) => {
     }); */
 
     const user = new Users();
+    user.name = name;
+    user.surname = surname;
     user.username = username;
     user.email = email;
     user.password = hash;
@@ -107,8 +109,10 @@ const getUsers = async (req, res) => {
 
 const updateUser = async (req, res) => {
   try {
-    const { username, email, data } = req.body;
+    const { name, surname, username, email, data } = req.body;
     await Users.findByIdAndUpdate(req.sessionData.userId, {
+      name,
+      surname,
       username,
       email,
       data,

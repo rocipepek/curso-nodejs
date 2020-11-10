@@ -18,7 +18,7 @@ const createProduct = async (req, res) => {
   }
 };
 
-//onst deleteProduct = (req, res) => {};
+//const deleteProduct = (req, res) => {};
 
 const getProducts = async (req, res) => {
   try {

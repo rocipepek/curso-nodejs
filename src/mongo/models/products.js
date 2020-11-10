@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 
 const productSchema = new Schema(
   {
-    //propiedades del usuario
+    //propiedades del producto
     title: { type: String, required: true },
     desc: { type: String, required: true },
     price: { type: Number, required: true },
